@@ -1,8 +1,10 @@
+package Conditions;
+
 import java.util.Scanner;
 
-public class Main {
+public class B1 {
 
-    public static void main(String[] args) {
+    public static void b1(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //
         int dayOfWeek = scanner.nextInt();
