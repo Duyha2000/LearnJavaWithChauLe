@@ -1,0 +1,121 @@
+https://docs.google.com/document/d/1ESB8fY-5GSJi65RTXlDRnXS7UQlVXVzip07nS6JCVIc/edit?tab=t.0
+
+Bài 8:
+int userInput;
+do {
+    System.out.println("Show menu ");
+    System.out.println("1. Coke $1.25");
+    System.out.println("2. Pepsi $1.00");
+    System.out.println("3. Water $2.00");
+    System.out.println("4. Coffee $1.50");
+    System.out.println("Exit Menu");
+
+    userInput = scanner.nextInt();
+    switch (userInput) {
+        case 1:
+            System.out.println(" You selected Coke. Price: $1.25");
+            break;
+
+        case 2:
+            System.out.println("You selected Pepsi. Price: $1.00");
+            break;
+
+        case 3:
+            System.out.println(" You selected Water. Price: $2.00");
+            break;
+
+        case 4:
+            System.out.println(" You selected Coffe. Price: $1.50");
+            break;
+        default:
+            System.out.println("You not selected."); {
+            System.out.println("Invalid choice. Please try again.");
+        }
+    }
+
+} while (userInput != 5);
+
+Bài 9: 
+// Exercise 9:
+int choice;
+do {
+    System.out.println(" Calculator Menu");
+    System.out.println("1. Add");
+    System.out.println("2. Subtract");
+    System.out.println("3. Multiply");
+    System.out.println("4. Divide");
+    System.out.println("5. Exit");
+    choice = scanner.nextInt();
+    int num1 = scanner.nextInt();
+    int num2 = scanner.nextInt();
+    switch (choice) {
+        case 1:
+
+            int sum = (num1 + num2);
+            System.out.println("Addition " + sum);
+            break;
+        case 2:
+            int subtract = (num1 - num2);
+            System.out.println("Subtraction " + subtract);
+            break;
+        case 3:
+            int multiply = (num1 * num2);
+            System.out.println("Multiply " + multiply);
+            break;
+        case 4:
+            int divide = (num1 / num2);
+            if (divide != 0) {
+                System.out.println("Divison by zero is not allowed");
+            } else {
+                System.out.println("Divison " + divide);
+            }
+        case 5:
+            System.out.println("Exit");
+        default:
+            System.out.println(" . ");
+            break;
+    }
+
+} while (choice != 5);
+
+Bài 10:
+// Input: age
+// Output: age. Nếu > 120 hoặc < 0 hiển thị ra err và bắt nhập lại
+int age;
+do {
+    System.out.println("Enter your age: ");
+
+    age = scanner.nextInt();
+    if (age < 0 || age > 120) {
+        System.out.println("Invalid age. Please try again");
+    }
+} while (age < 0 || age > 120);
+System.out.println(age);
+--
+
+// Input: username, password, confirmPassword
+// Output: username > 8 ký tự, password > 10 ký tự -> nếu < sẽ hiển thị lỗi và
+// bắt nhập lại. confirmPassword phải giống password và > 10 ký tự
+String name;
+String pass;
+String confirm;
+do {
+    System.out.println(" Nhap user name");
+    System.out.println(" Nhap password");
+    System.out.println(" confirm password");
+
+    name = scanner.nextLine();
+    pass = scanner.nextLine();
+    confirm = scanner.nextLine();
+
+    if (name.length() < 8 || pass.length() < 10) {
+        System.out.println("Error. Try again");
+    }
+    if (confirm.length() < 10) {
+        System.out.println("Bat nhap lai");
+    }
+    if (!confirm.equals(pass)) {
+        System.out.println("Incorrect");
+    }
+} while (name.length() < 8 || pass.length() < 10 || confirm.length() < 10 || !confirm.equals(pass));
+System.out.println("Register success!!");
